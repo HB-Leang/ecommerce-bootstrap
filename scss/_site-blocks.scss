@@ -592,8 +592,8 @@ $bg-gray: #f9f9f9;
 	}
 	img {
 		left: 50%;
-		top: 15%;
-		transform: translateX(-50%);
+		top: 50%;
+		transform: translate(-50%, -50%);
 		object-fit: cover;
 		max-width: 300px;
 		// bottom: 0;
@@ -604,6 +604,9 @@ $bg-gray: #f9f9f9;
 .item-entry {
 	.product-item {
 		margin-bottom: 30px;
+	}
+	.product-detail-item{
+		margin: 0;
 	}
 	.item-title {
 		font-size: 18px;

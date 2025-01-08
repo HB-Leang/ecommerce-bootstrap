@@ -23,6 +23,9 @@ a {
 	color: $black;
 }
 
+.text-discount {
+	color: lighten($black, 70%);
+}
 
 .site-wrap {
 	&:before {
