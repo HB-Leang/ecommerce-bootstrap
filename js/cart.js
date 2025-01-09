@@ -24,6 +24,7 @@ class Cart {
     this.calculateTotal();
     console.log("Added item:", product);
     console.log("Current cart:", this.items);
+    alert(product.name + "added to the cart")
   }
 
   removeItem(productId) {
@@ -45,6 +46,13 @@ class Cart {
     this.calculateTotal();
     this.renderCartItems();
     // this.refreshPage();
+  }
+  clearCart() {
+    localStorage.removeItem("cart");
+    cart.items = [];
+    cart.updateCartCount();
+    this.refreshPage();
+    console.log('cart cleared')
   }
   refreshPage(){
     location.reload();
@@ -129,11 +137,7 @@ class Cart {
                       </div>
                   </td>
                   <td>$${(item.price * item.quantity).toFixed(2)}</td>
-                  <td>
-                      <button class="btn btn-primary btn-sm" onclick="cart.removeItem('${
-                        item.id
-                      }')">X</button>
-                  </td>
+                  
               </tr>
           `
       )
@@ -186,6 +190,21 @@ class Cart {
 
 // create new cart
 const cart = new Cart();
+
+// Clear Cart
+document.addEventListener("DOMContentLoaded", () => {
+  const clearCartButton = document.getElementById("clear-cart");
+  if (clearCartButton) {
+    clearCartButton.addEventListener("click", () => {
+      cart.clearCart();
+      console.log("Cart Cleared")
+    });
+  } else {
+    console.error("Clear Cart button not found.");
+  }
+});
+
+
 document.querySelectorAll(".buy-now").forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
@@ -255,3 +274,7 @@ if (document.getElementById("paypal-button-container")) {
     })
     .render("#paypal-button-container");
 }
+
+
+
+

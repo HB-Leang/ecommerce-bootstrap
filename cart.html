@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ShopMax &mdash; Colorlib e-Commerce Template</title>
+    <title>Phanthom</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,6 +22,13 @@
       .center-align td{
         text-align: center;
         vertical-align: middle;
+        place-items: center;
+      }
+      .center-align img{
+        height: 100px;
+      }
+      #clear-cart{
+        border: 1px solid blue;
       }
     </style>
   </head>
@@ -64,7 +71,7 @@
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
             <a href="cart.html" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
-              <span class="number">2</span>
+              
             </a>
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
           </div>
@@ -90,7 +97,6 @@
               <th class="product-price">Price</th>
               <th class="product-quantity">Quantity</th>
               <th class="product-total">Total</th>
-              <th class="product-remove">Remove</th>
             </tr>
           </thead>
           <tbody id="cart-items" class="center-align">
@@ -98,36 +104,17 @@
           </tbody>
         </table>
 
-        <div class="row">
+        <div class="row" >
           <div class="col-md-6">
-            <div class="row mb-5">
-              <div class="col-md-6 mb-3 mb-md-0">
-                <button class="btn btn-primary btn-sm btn-block">
-                  Update Cart
-                </button>
-              </div>
+            <div class="row mb-5" >
               <div class="col-md-6">
-                <button class="btn btn-outline-primary btn-sm btn-block">
-                  Continue Shopping
+                <button id="clear-cart" class="btn btn-outline-primary btn-sm btn-block"  >
+                  Clear Cart
                 </button>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12">
-                <label class="text-black h4" for="coupon">Coupon</label>
-                <p>Enter your coupon code if you have one.</p>
-              </div>
-              <div class="col-md-8 mb-3 mb-md-0">
-                <input
-                  type="text"
-                  class="form-control py-3"
-                  id="coupon"
-                  placeholder="Coupon Code"
-                />
-              </div>
-              <div class="col-md-4">
-                <button class="btn btn-primary btn-sm">Apply Coupon</button>
-              </div>
+              
             </div>
           </div>
           <div class="col-md-6 pl-5">
@@ -158,16 +145,7 @@
                 </div>
                 <div id="paypal-button-container"></div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <button
-                      class="btn btn-primary btn-lg py-3 btn-block"
-                      onclick="window.location='checkout.html'"
-                    >
-                      Proceed To Checkout
-                    </button>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -219,6 +197,8 @@
     </footer>
   </div>
 
+
+  
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
@@ -226,9 +206,10 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="js/paypal.js"></script>
   <script src="js/main.js"></script>
-    
+  <script src="js/paypal.js"></script>
+  <script src="js/cart.js"></script>
+
+
   </body>
 </html>

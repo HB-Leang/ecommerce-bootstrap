@@ -1,7 +1,7 @@
 class PayPalHandler {
   constructor() {
     this.clientId =
-      "AepO-tR6EyEcPgEdmcIJVpx9hM8TJTyu-iTDEQI_y8k7PkwMJM0T3KPur_HR2w62MvXzRfSRzT2Qephj";
+      "AcR-LZfAveBFvOXORz7RUe_TAx0a6dkdDWorVbXXRi-7BHI1W2OvLNugPRES29lxk5to7NTY23rvZEM-";
     this.loadPayPalScript();
   }
 
